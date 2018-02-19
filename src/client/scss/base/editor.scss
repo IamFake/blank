@@ -1,0 +1,178 @@
+@import "compass/css3";
+.editor__container {
+	background:    #fff;
+	border-radius: 2px;
+	padding:       0;
+	height:        auto;
+	.editor__toolbar {
+		position: relative;
+		z-index:  2;
+		padding:  1px;
+		$button-height: 26px;
+		$button-width: $button-height;
+		$button-padding: 0;
+		$button-border-width: 1px;
+		.editor__button {
+			display:        inline-block;
+			border-radius:  3px;
+			border:         $button-border-width solid #ccc;
+			margin:         1px;
+			padding:        $button-padding;
+			cursor:         pointer;
+			height:         $button-height;
+			width:          $button-width;
+			line-height:    $button-height - ($button-padding * 2) - ($button-border-width * 2);
+			text-align:     center;
+			vertical-align: top;
+			&.active {
+				background: linear-gradient(45deg, rgba(10, 7, 57, 1) 0, rgba(104, 3, 47, 1) 100%);
+			}
+			&.editor__selector {
+				min-width: 100px;
+				border:    0;
+				.form-control {
+					padding:     0;
+					line-height: inherit;
+					height:      100%;
+				}
+			}
+			&.editor__plugin-fontfamily {
+				width: 150px;
+			}
+			&.editor__plugin-fontsize {
+
+			}
+			&.editor__plugin-fontcolor {
+				width:     70px;
+				min-width: auto;
+				.container {
+					position:      absolute;
+					top:           28px;
+					left:          0;
+					background:    #fff;
+					border:        1px solid #ccc;
+					border-radius: 4px;
+					padding:       5px;
+					width:         230px;
+					line-height:   0;
+				}
+				.colorItem {
+					display:     inline-block;
+					border:      1px solid #e9e9e9;
+					padding:     0;
+					margin:      1px;
+					line-height: 0;
+					.colorPad {
+						display:     inline-block;
+						width:       20px;
+						height:      20px;
+						overflow:    hidden;
+						line-height: 0;
+					}
+				}
+				.dropdown {
+					line-height: 0;
+					width:       100%;
+				}
+				.editor__plugin-fontcolor__toggle {
+					display:       inline-block;
+					border-radius: 3px;
+					border:        $button-border-width solid #ccc;
+					padding:       2px;
+					height:        26px;
+					width:         100%;
+					.colorPad {
+						display:     block;
+						width:       100%;
+						height:      100%;
+						line-height: 20px;
+						position:    relative;
+						.Select-placeholder {
+							line-height: 20px;
+						}
+					}
+				}
+			}
+		}
+		.Select {
+			.Select-control {
+				height:    23px;
+				max-width: 150px;
+				.Select-value {
+					line-height: 24px;
+				}
+			}
+			.Select-input {
+				height: 22px;
+				> input {
+					padding: 3px 0 3px;
+				}
+			}
+			.Select-placeholder {
+				line-height:   24px;
+				padding-right: 20px;
+			}
+		}
+	}
+	.editor__content {
+		position: relative;
+		z-index:  1;
+		.public-DraftEditor-content {
+			min-height: 100px;
+			padding:    10px;
+			width:      100%;
+		}
+	}
+	.atomic-toolbar {
+		//display:       inline-block;
+		display:       table;
+		padding:       3px;
+		border-radius: 3px;
+		border:        1px solid #ccc;
+		background:    #fff;
+		z-index:       50;
+		white-space:   nowrap;
+		height:        32px;
+		.toolbar-element {
+			display: table-cell;
+			cursor:  pointer;
+			&.active {
+				background: linear-gradient(45deg, rgba(10, 7, 57, 1) 0, rgba(104, 3, 47, 1) 100%);
+			}
+			img {
+				display: block;
+			}
+		}
+	}
+}
+.atomic-toolbar-padds-dialog {
+	width: 350px;
+	.atomic-toolbar-padds-table {
+		tbody {
+			tr {
+				td {
+					padding:    0;
+					text-align: center;
+					border-top: 0;
+					.form-group {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+.atomic-wrapper {
+	position: relative;
+	z-index:  10;
+	.image-entity {
+		border: 1px solid transparent;
+		cursor: pointer;
+		&.hovered {
+			border-color: #ccc;
+		}
+		&.selected {
+			border-color: blue;
+		}
+	}
+}

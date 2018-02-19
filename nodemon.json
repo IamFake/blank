@@ -1,0 +1,7 @@
+{
+  "verbose": true,
+  "debug": true,
+  "exec": "babel-node {{filename}}",
+  "watch": "src/server",
+  "ext": "js"
+}

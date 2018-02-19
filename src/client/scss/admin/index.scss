@@ -1,0 +1,17 @@
+@import "compass/css3";
+.admin {
+	display:       flex;
+	align-items:   stretch;
+	align-content: stretch;
+	.admin__pannel-list {
+		flex-basis: 170px;
+		flex-grow:  0;
+	}
+	.admin__pannel-content {
+		background: #f1f1f1;
+		flex-grow:  1;
+	}
+	.admin-about__edit-form {
+
+	}
+}

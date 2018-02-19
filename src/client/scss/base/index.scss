@@ -1,0 +1,47 @@
+@import "font-rem";
+@import "colors";
+* {
+	box-sizing: border-box;
+}
+html {
+	font-size:   62.5%;
+	height:      100%;
+	line-height: 1.2;
+}
+body {
+	height:      100%;
+	font-family: 'Open Sans', sans-serif;
+	background:  #fff;
+	@include font-rem();
+}
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 10px;
+}
+h1 {
+	@include font-rem(2.2)
+}
+h2 {
+	@include font-rem(2)
+}
+h3 {
+	@include font-rem(1.8)
+}
+h4, h5, h6 {
+	@include font-rem(1.6)
+}
+a {
+	color:      $color-std-link;
+	transition: color 0.5s;
+	&:active {
+		color: $color-std-link-active;
+	}
+	&:hover {
+		color: $color-std-link-hover;
+	}
+}
+.inl {
+	display: inline-block;
+}
+.alignHor {
+	text-align: center;
+}

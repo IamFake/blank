@@ -1,0 +1,61 @@
+@import "compass/css3";
+@import "../base/colors";
+.about {
+	position: relative;
+	.about__sidecontrols__admin-button {
+		position:      absolute;
+		top:           0;
+		right:         -10px;
+		border-radius: 50%;
+		width:         40px;
+		height:        40px;
+		background:    #e1e1e1;
+		overflow:      hidden;
+		a {
+			position: absolute;
+			top:      0;
+			left:     0;
+			right:    0;
+			bottom:   0;
+		}
+	}
+	.about__pannel_central {
+		display: inline-block;
+		width:   80%;
+		.about__content {
+
+		}
+	}
+	.about__pannel_right {
+		display: inline-block;
+		width:   20%;
+		.about__list-item {
+			a {
+				text-decoration: none;
+				border-bottom:   1px solid #ebe1ff;
+			}
+			a,
+			.about__list-item--current {
+				padding: 7px 10px;
+				display: block;
+			}
+			&.selected {
+				a,
+				.about__list-item--current {
+					background:    #ebe1ff;
+					border-radius: 2px;
+					border:        0;
+				}
+			}
+			&:first-child {
+				margin-top: 0;
+			}
+			&:last-child {
+				margin-bottom: 0;
+				a {
+					border: 0;
+				}
+			}
+		}
+	}
+}
